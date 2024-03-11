@@ -1,0 +1,47 @@
+:root {
+  --upIn-anim: upIn 1s forwards;
+  --leftOut-anim: leftOut 0.5s forwards;
+  --primary: #ffb300;
+}
+body {
+  max-width: 800px;
+  margin: 100px auto 20px;
+  padding: 20px;
+}
+h1,
+.anim1 {
+  opacity: 0;
+  text-align: center;
+}
+h1 {
+  animation: var(--upIn-anim);
+}
+.anim1 {
+  animation: var(--upIn-anim) 0.1s;
+}
+form {
+  opacity: 0;
+  animation: var(--upIn-anim) 0.2s;
+}
+.swipeLeft {
+  animation: var(--leftOut-anim);
+}
+
+@keyframes upIn {
+  0% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes leftOut {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+}
